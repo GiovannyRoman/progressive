@@ -1,15 +1,42 @@
+<!DOCTYPE html>
+<div layout="column" layout-fill class = "form" >
+      <md-toolbar layout = "row">
+            <div layout = "row" flex>
+                  <span class="md-display-3">Create a circle or rectangle</span>
+                  <span flex></span>
+            </div>
+      </md-toolbar>
+      <md-input-container class="md-block">
+            <label>Enter x position for a circle</label>
+            <input  ng-model="canvasCtrl.circle.x">
+      </md-input-container>
+      <md-input-container class="md-block">
+            <label>Enter y position for a circle</label>
+            <input  ng-model="canvasCtrl.circle.y">
+      </md-input-container>
+      <md-input-container class="md-block">
+            <label>Enter radius for a circle</label>
+            <input  ng-model="canvasCtrl.circle.radius">
+      </md-input-container>
+      <md-button class="md-raised md-accent md-hue-3" ng-click = "canvasCtrl.drawCircle(canvasCtrl.circle.x,canvasCtrl.circle.y,canvasCtrl.circle.radius)">Create a circle</md-button>
 
-
-<form>
-    First Name: <input type="text" ng-model="{canvasCtrl.circle.x">
-  </form>
-  <h1>You entered: {{{canvasCtrl.circle.x}}</h1>
-<p>Cirle properties</p>
-<p>the position of x for circle is {{canvasCtrl.circle.x}}</p>
-<p>the position of y for circle is {{canvasCtrl.circle.y}}</p>
-<p>the radius of the circle is {{canvasCtrl.circle.radius}}</p>
-
-<p>Rectangle properties</p>
-<p>the position of x for circle is {{canvasCtrl.circleX}}</p>
-<p>the position of y for circle is {{canvasCtrl.circleY}}</p>
-<p>the radius of the circle is {{canvasCtrl.radius}}</p>
+      <md-input-container class="md-block">
+            <label>Enter length position for a rectangle</label>
+            <input  ng-model="canvasCtrl.rectangle.length">
+      </md-input-container>
+      <md-input-container class="md-block">
+            <label>Enter width for a rectangle</label>
+            <input  ng-model="canvasCtrl.rectangle.width">
+      </md-input-container>
+      <md-input-container class="md-block">
+            <label>Enter x position for a rectangle</label>
+            <input  ng-model="canvasCtrl.rectangle.x">
+      </md-input-container>
+      <md-input-container class="md-block">
+            <label>Enter y position for a rectangle</label>
+            <input  ng-model="canvasCtrl.rectangle.y">
+      </md-input-container>
+      <md-button class="md-raised md-accent md-hue-3" ng-click= "canvasCtrl.drawRectangle(canvasCtrl.rectangle.length,canvasCtrl.rectangle.width,canvasCtrl.rectangle.x,canvasCtrl.rectangle.y)">Create a rectangle</md-button>
+</div>
+<p></p>
+<canvas id="myCanvas" width="600" height="400" style="border:1px solid #d3d3d3;"></canvas>
